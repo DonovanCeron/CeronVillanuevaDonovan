@@ -394,7 +394,7 @@ function convertirbin(){
     eliminarP();
     let ipv = document.getElementById("dip").value.split(".");
     if(ipv.length!=4){
-        alert("Direccion IP no valida >:c. Ingrese de nuevo");
+        alert("Direccion IP no valida. Ingrese de nuevo");
         return false;
     }else
     ipv[0]=parseInt(ipv[0]);
@@ -402,13 +402,13 @@ function convertirbin(){
     ipv[2]=parseInt(ipv[2]);
     ipv[3]=parseInt(ipv[3]);
     if(ipv[0]>255 || ipv[1]>255 || ipv[2]>255 || ipv[3]>255){
-        alert("Direccion IP no valida >:c. Ingrese de nuevo. Fuera de rango");
+        alert("Direccion IP no valida. Ingrese de nuevo. Fuera de rango");
         return false;
     }else 
     for(let i=0; i<ipv.length;i++){
         var nan = isNaN(ipv[i]);
         if(nan==true){
-            alert("Direccion IP no valida >:c. Ingrese de nuevo NaN");
+            alert("Direccion IP no valida. Ingrese de nuevo NaN");
             return false;
         }
     }
